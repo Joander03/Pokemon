@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./index.css";
 import reportWebVitals from './reportWebVitals';
-import Root from './Root/Root';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Pokemon from './Pokemon/Pokemon';
 import Combate from './Combate/Combate';
 import Historial from './Historial/Historial';

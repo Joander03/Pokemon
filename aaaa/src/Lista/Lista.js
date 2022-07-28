@@ -1,4 +1,5 @@
 import React, {useEffect, useInsertionEffect, useState} from "react"
+import "./lista.css"
 
 const Pokemon = (props) => {
     const [pokemons, setPokemons] = useState([])
@@ -14,10 +15,12 @@ const Pokemon = (props) => {
         .then(res => res.json())
         .then(
             (data) => {
+                console.log(data)
+                setPokemons(data)
                 setPokemons(data.results)
             }
         )
-    })
+    }, [])
        
     const handleClick = () => {
         setTitulo("Ahora soy un titulo")
@@ -26,9 +29,9 @@ const Pokemon = (props) => {
     return (
         <>
             {titulo}
-            <button onClick={handleClick}> Cambiar titulo</button>
+            <div id="zzz"></div>
             {pokemons.map((pokemon) => {
-                return(<div>{pokemon.name}</div>)
+                return(<div id="ola">{pokemon.name}</div>)
             })}
             Pokemon Funciona !  
         </>
